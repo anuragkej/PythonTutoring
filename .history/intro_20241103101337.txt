@@ -1,0 +1,7 @@
+String concatenation: +
+Python Turtle
+User input: input(“What is your name?”)
+Modulus %
+Exponent **
+String indexing -> “Rahul”[0] = “R”
+

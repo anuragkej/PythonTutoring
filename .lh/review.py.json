@@ -1,0 +1,54 @@
+{
+    "sourceFile": "review.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1730643534438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730643909787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,12 @@\n if boolVar:\n     print(\"Hello!\")\n \n else:\n-    print(\"Bye\")\n+    print(\"Bye.\")\n+\n+raining = True\n+while raining:\n+\n+    print(\"It's raining.\")\n+\n+    raining = False\n"
+                },
+                {
+                    "date": 1730644133554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,11 @@\n \n     print(\"It's raining.\")\n \n     raining = False\n+\n+# use while loop - boolean (T or F)\n+# use for loop - incrementing/decrementing (numbers, certain bound)\n+# for loop printing all odd numbers 1-30 (inclusive)\n+\n+for i in range(1, 30, 2):\n+    print(i)\n"
+                },
+                {
+                    "date": 1730644542152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,14 @@\n # use while loop - boolean (T or F)\n # use for loop - incrementing/decrementing (numbers, certain bound)\n # for loop printing all odd numbers 1-30 (inclusive)\n \n-for i in range(1, 30, 2):\n-    print(i)\n+\n+# functions - bundle a lot of code together\n+\n+\n+def printOddNumbers(endBound):\n+    for i in range(1, endBound, 2):\n+        print(i)\n+\n+\n+printOddNumbers(21)\n"
+                },
+                {
+                    "date": 1730644813708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n numStr = \"3\"\n num = 34\n boolVar = True\n \n+\n if boolVar:\n     print(\"Hello!\")\n \n else:\n@@ -28,4 +29,5 @@\n         print(i)\n \n \n printOddNumbers(21)\n+print(raining)\n"
+                },
+                {
+                    "date": 1730645587203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,6 +28,19 @@\n     for i in range(1, endBound, 2):\n         print(i)\n \n \n-printOddNumbers(21)\n-print(raining)\n+for j in range(2, 5):\n+    print(j)\n+\n+# printOddNumbers(21)\n+\n+# # we can basicalyl pick random RPS for 2 players, repeat this numTimes\n+# def rockPaperScissors(numTimes):\n+\n+import random\n+\n+# accessing by index\n+serves = [\"topspin\", \"flat\", \"kick\"]\n+randServe = random.randint(0, 2)\n+\n+print(serves[randServe])\n"
+                },
+                {
+                    "date": 1730645733182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n import random\n \n # accessing by index\n serves = [\"topspin\", \"flat\", \"kick\"]\n-randServe = random.randint(0, 2)\n+randServe = random.randint(1, 1)\n \n print(serves[randServe])\n"
+                },
+                {
+                    "date": 1730645753974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n import random\n \n # accessing by index\n serves = [\"topspin\", \"flat\", \"kick\"]\n-randServe = random.randint(1, 1)\n+randServe = random.randint(0, 1)\n \n print(serves[randServe])\n"
+                },
+                {
+                    "date": 1730645810136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,8 @@\n \n import random\n \n # accessing by index\n-serves = [\"topspin\", \"flat\", \"kick\"]\n-randServe = random.randint(0, 1)\n+serves = [[3, 4], [5, 4], [0, 2]]\n+randServe = random.randint(0, 2)\n \n print(serves[randServe])\n"
+                },
+                {
+                    "date": 1730646817547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import random\n+\n numStr = \"3\"\n num = 34\n boolVar = True\n \n@@ -33,14 +35,22 @@\n     print(j)\n \n # printOddNumbers(21)\n \n-# # we can basicalyl pick random RPS for 2 players, repeat this numTimes\n-# def rockPaperScissors(numTimes):\n+# accessing by index\n+# serves = [[3, 4], [5, 4], [0, 2]]\n+# randServe = random.randint(0, 2)\n \n-import random\n+# print(serves[randServe])\n \n-# accessing by index\n-serves = [[3, 4], [5, 4], [0, 2]]\n-randServe = random.randint(0, 2)\n \n-print(serves[randServe])\n+# we can basicalyl pick random RPS for 2 players, repeat this numTimes\n+def rockPaperScissors(numTimes):\n+    # size of choices = 3, last index is 3 - 1: 2\n+    choices = [\"Rock\", \"Paper\", \"Scissors\"]\n+\n+    for a in range(numTimes):\n+        # set players to either RPS\n+        player1 = choices[random.randint(0, len(choices) - 1)]\n+        player2 = choices[random.randint(0, len(choices) - 1)]\n+\n+    # print(choices[randomChoice])\n"
+                }
+            ],
+            "date": 1730643534438,
+            "name": "Commit-0",
+            "content": "numStr = \"3\"\nnum = 34\nboolVar = True\n\nif boolVar:\n    print(\"Hello!\")\n\nelse:\n    print(\"Bye\")\n"
+        }
+    ]
+}

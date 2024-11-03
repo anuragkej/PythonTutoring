@@ -1,0 +1,42 @@
+{
+    "sourceFile": "oop.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1730035736716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730035752231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n \n print(wilsonRacket.color)\n \n \n-hi = TennisRacket(\"Yellow\", 5, \"Wilson\")\n-bye = TennisRacket(\"Blue\", 5, \"Wilson\")\n-anurag = TennisRacket(\"Green\", 5, \"Wilson\")\n+# hi = TennisRacket(\"Yellow\", 5, \"Wilson\")\n+# bye = TennisRacket(\"Blue\", 5, \"Wilson\")\n+# anurag = TennisRacket(\"Green\", 5, \"Wilson\")\n"
+                },
+                {
+                    "date": 1730035945192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,12 @@\n \n \n wilsonRacket = TennisRacket(\"Red\", \"White\", 5, \"Wilson\")\n \n-wilsonRacket.changeColor(\"White\")\n+# wilsonRacket.changeColor(\"White\")\n \n print(wilsonRacket.color)\n \n \n-# hi = TennisRacket(\"Yellow\", 5, \"Wilson\")\n-# bye = TennisRacket(\"Blue\", 5, \"Wilson\")\n-# anurag = TennisRacket(\"Green\", 5, \"Wilson\")\n+hi = TennisRacket(\"Yellow\", 5, \"Wilson\")\n+bye = TennisRacket(\"Blue\", 5, \"Wilson\")\n+anurag = TennisRacket(\"Green\", 5, \"Wilson\")\n"
+                },
+                {
+                    "date": 1730035986894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n \n wilsonRacket = TennisRacket(\"Red\", \"White\", 5, \"Wilson\")\n \n-# wilsonRacket.changeColor(\"White\")\n+wilsonRacket.changeColor(\"White\")\n \n print(wilsonRacket.color)\n \n \n"
+                },
+                {
+                    "date": 1730036022669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n \n wilsonRacket = TennisRacket(\"Red\", \"White\", 5, \"Wilson\")\n \n-wilsonRacket.changeColor(\"White\")\n+# wilsonRacket.changeColor(\"White\")\n \n print(wilsonRacket.color)\n \n \n"
+                },
+                {
+                    "date": 1730036739006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,21 @@\n     def changeColor(self, newColor):\n         self.color = newColor\n \n \n+    def changeSize(self, newSize):\n+        self.size = newSize   \n+\n+\n wilsonRacket = TennisRacket(\"Red\", \"White\", 5, \"Wilson\")\n \n-# wilsonRacket.changeColor(\"White\")\n+AaravRacket = TennisRacket(\"Black\", \"Green\", 7, \"Aarav\")\n \n+AaravRacket.changeSize(26)\n+print(AaravRacket.size)\n+\n+wilsonRacket.changeColor(\"White\")   \n+\n print(wilsonRacket.color)\n \n \n # hi = TennisRacket(\"Yellow\", 5, \"Wilson\")\n"
+                },
+                {
+                    "date": 1730037198250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import random\n class TennisRacket:\n     # color\n     # Brand\n     # Size\n@@ -14,20 +15,27 @@\n         self.color = newColor\n \n     def changeSize(self, newSize):\n         self.size = newSize\n+    \n+    # create a function that simulates real time gameplay, use random to show how many games we would win\n+    def play(self, numGames):\n+        gamesWon = random.randint(numGames)\n+        return gamesWon\n+        \n \n \n wilsonRacket = TennisRacket(\"Red\", \"White\", 5, \"Wilson\")\n \n AaravRacket = TennisRacket(\"Black\", \"Green\", 7, \"Aarav\")\n \n AaravRacket.changeSize(26)\n-print(AaravRacket.size)\n+gamesWon = AaravRacket.play(7)\n+print(gamesWon)\n \n wilsonRacket.changeColor(\"White\")\n \n-print(wilsonRacket.color)\n+# print(wilsonRacket.color)\n \n \n # hi = TennisRacket(\"Yellow\", 5, \"Wilson\")\n # bye = TennisRacket(\"Blue\", 5, \"Wilson\")\n"
+                }
+            ],
+            "date": 1730035736716,
+            "name": "Commit-0",
+            "content": "class TennisRacket:\n    # color \n    # Brand\n    # Size\n    \n    #constructor\n    def __init__(self, color, handleColor, size, brand):\n        self.color = color\n        self.handleColor = handleColor\n        self.size = size\n        self.brand = brand\n    \n    def changeColor(self, newColor):\n        self.color = newColor\n\n\n\nwilsonRacket = TennisRacket(\"Red\", \"White\", 5, \"Wilson\")\n\nwilsonRacket.changeColor(\"White\")\n\nprint(wilsonRacket.color)\n\n\nhi = TennisRacket(\"Yellow\", 5, \"Wilson\")\nbye = TennisRacket(\"Blue\", 5, \"Wilson\")\nanurag = TennisRacket(\"Green\", 5, \"Wilson\")"
+        }
+    ]
+}

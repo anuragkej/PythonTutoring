@@ -1,0 +1,2 @@
+def sampleFunc():
+    print("hi")

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "intro.txt",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1730646817047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1730646817047,
+            "name": "Commit-0",
+            "content": "String concatenation: +\nPython Turtle\nUser input: input(“What is your name?”)\nModulus %\nExponent **\nString indexing -> “Rahul”[0] = “R”\n\n"
+        }
+    ]
+}
